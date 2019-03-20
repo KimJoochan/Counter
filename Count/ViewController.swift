@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txt: UILabel!
+    var counter=0;
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func tapCount(_ sender: UIButton) {
+        counter = counter+1;
+        if(counter>=11){
+            counter=1;
+        }
+        txt.text=String(counter)
+    }
+    
 
 }
 
