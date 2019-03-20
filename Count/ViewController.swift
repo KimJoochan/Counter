@@ -17,10 +17,18 @@ class ViewController: UIViewController {
         txt.text="0"
         // Do any additional setup after loading the view, typically from a nib.
     }
+    var checked=0
     @IBAction func tapCount(_ sender: UIButton) {
-        counter = counter+1;
-        if(counter>=11){
-            counter=1;
+        if(checked==0){
+            counter = counter+1;
+            if(counter>=9){
+                checked=1;
+            }
+        }else if(checked==1){
+            counter=counter-1;
+            if(counter<=0){
+                checked=0;
+            }
         }
         txt.text=String(counter)
     }
