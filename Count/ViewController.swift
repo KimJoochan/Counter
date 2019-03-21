@@ -25,10 +25,9 @@ class ViewController: UIViewController {
                 checked=1;
             }
         }else if(checked==1){
-            counter=counter-1;
-            if(counter<=0){
-                checked=0;
-            }
+            counter = 0
+            checked=0;
+            
         }
         txt.text=String(counter)
     }
